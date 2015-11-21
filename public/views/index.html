@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="HackPrinceton Fall 2015">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+</head>
+
+<body ng-app="app" ng-controller="AppCtrl">
+<script type="text/ng-template" id="pageContent.html">
+	<div class="person-dialog">
+		<div class="dialog-image">
+			<div class="person-image-dialog-div">
+				<img src="../doge.jpeg" class="team-member-dialog-image">
+			</div>
+			<div class="dialog-title-block"> TEST </div>
+		</div>
+		
+		<div class="dialog-header">
+			<div class="header-stripe">
+				<div class="dialog-button-close" ng-click="cancel()"><i class="fa fa-close"></i></div>
+			</div>
+			<div class="text-dialog"> TEST </div>
+		</div>
+	</div>
+	
+	<!--
+	<div class="modal-header">
+		<h3 class="modal-title">I am a modal!</h3>
+	</div>
+	<div class="modal-body">
+		<h1>{{ selectedPerson.name }}</h1>
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-primary" type="button" ng-click="cancel()">OK</button>
+		<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+	</div>
+	-->
+	
+</script>
+<div class="outer-container">
+    <div class="inner-container" fade-logo-up="logoHasFadedUp">
+        <div class="logo-container" move-logo-right="logoHasMovedRight">
+            <div class="entropy-container" move-div-left="hasMoved">
+                <div class="first-letter">T</div>
+                <div class="word-after-first-letter" fade-words-up="wordLeftHasFadedUp">Thank</div>
+            </div>
+            <div class="ventures-container">
+                <div class="first-letter">Y</div>
+                <div class="word-after-first-letter" fade-words-up="wordRightHasFadedUp">You</div>
+                <div class="word-ventures-mask" move-div-right="hasMoved" fade-overlay-down="overlayHasFadedDown"></div>
+                <div class="word-ventures-mask-extra" move-div-right="hasMoved" fade-overlay-down="overlayHasFadedDown"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fadeup-container" fade-up-site="siteHasFadedUp">
+
+        <div class="entropy-nav-bar">
+
+            <div class="entropy-nav-bar-titles">
+                <h3 ng-class="{selected:tabCategories[0].isSelected === true}" class="entropy-nav" scale-tab="tabOneScaledUp" ng-mouseenter="changeNavTitle(tabCategories[0].number)" ng-mouseleave="changeNavTitle(tabCategories[0].number)" ng-click="selectPageTab(tabCategories[0], this)">{{tabCategories[0].name}}</h3>
+                <h3 ng-class="{selected:tabCategories[1].isSelected === true}" class="entropy-nav" scale-tab="tabTwoScaledUp" ng-mouseenter="changeNavTitle(tabCategories[1].number)" ng-mouseleave="changeNavTitle(tabCategories[1].number)" ng-click="selectPageTab(tabCategories[1], this)">{{tabCategories[1].name}}</h3>
+                <h3 ng-class="{selected:tabCategories[2].isSelected === true}" class="entropy-nav" scale-tab="tabThreeScaledUp" ng-mouseenter="changeNavTitle(tabCategories[2].number)" ng-mouseleave="changeNavTitle(tabCategories[2].number)" ng-click="selectPageTab(tabCategories[2], this)">{{tabCategories[2].name}}</h3>
+                <h3 ng-class="{selected:tabCategories[3].isSelected === true}" class="entropy-nav" scale-tab="tabFourScaledUp" ng-mouseenter="changeNavTitle(tabCategories[3].number)" ng-mouseleave="changeNavTitle(tabCategories[3].number)" ng-click="selectPageTab(tabCategories[3], this)">{{tabCategories[3].name}}</h3>
+                <h3 ng-class="{selected:tabCategories[4].isSelected === true}" class="entropy-nav" scale-tab="tabFiveScaledUp" ng-mouseenter="changeNavTitle(tabCategories[4].number)" ng-mouseleave="changeNavTitle(tabCategories[4].number)" ng-click="selectPageTab(tabCategories[4], this)">{{tabCategories[4].name}}</h3>
+				<h3 ng-class="{selected:tabCategories[5].isSelected === true}" class="entropy-nav" scale-tab="tabSixScaledUp" ng-mouseenter="changeNavTitle(tabCategories[5].number)" ng-mouseleave="changeNavTitle(tabCategories[5].number)" ng-click="selectPageTab(tabCategories[5], this)">{{tabCategories[5].name}}</h3>
+                <h3 ng-class="{selected:tabCategories[6].isSelected === true}" class="entropy-nav" scale-tab="tabSevenScaledUp" ng-mouseenter="changeNavTitle(tabCategories[6].number)" ng-mouseleave="changeNavTitle(tabCategories[6].number)" ng-click="selectPageTab(tabCategories[6], this)">{{tabCategories[6].name}}</h3>
+                <h3 ng-class="{selected:tabCategories[7].isSelected === true}" class="entropy-nav" scale-tab="tabEightScaledUp" ng-mouseenter="changeNavTitle(tabCategories[7].number)" ng-mouseleave="changeNavTitle(tabCategories[7].number)" ng-click="selectPageTab(tabCategories[7], this)">{{tabCategories[7].name}}</h3>
+            </div>
+        </div>
+
+        <!-- Home Page -->
+        <div ng-if="tab===1" class="page-container">
+            <div class="vision-section-text">
+                <p class="preamble vision"> Happy Thanksgiving!! </p>
+            </div>
+            <div class="tag-line">"Thank you everyone. I would not be even a shadow of myself without all of your help."</div>
+        </div>
+		
+		<!-- Family Page -->
+		<div ng-if="tab===2" class="page-container">
+
+			<div class="container" style="text-align: center">
+				<div>
+					<p class="preamble first">I cannot thank these people enough for whipping my lazy ass into shape.</p>
+				</div>
+				<div class="team-container">
+				
+				</div>
+			</div>
+		
+		</div>
+
+        <!-- Friends Page -->
+        <div ng-if="tab===3" class="team-page-container">
+			<div class="people-section-text">
+				<p class="preamble first"> Family away from home. Partners in crime. </p>
+			</div>
+			<div class="team-container">
+				<div class="team-member-container" ng-mouseenter="changePeopleTitle(1)" ng-mouseleave="changePeopleTitle(1)" ng-click="open(1)">
+					<div class="person-image-div">
+						<img src="../bromance.jpg" class="team-member-image">
+						<!-- <img src="" fade-person-title="personOneFadedUp" class="team-member-image color-image"> -->
+					</div>
+					<div fade-person-title="personOneFadedUp" class="person-title-block">
+						<h3 class="team-title" >Jiu Moon</h3>
+						<h4 class="team-subtitle">bro</h4>
+					</div>
+				</div>
+				<div class="team-member-container" ng-mouseenter="changePeopleTitle(2)" ng-mouseleave="changePeopleTitle(2)" ng-click="open(2)">
+					<div class="person-image-div">
+						<img src="../doge.jpeg" class="team-member-image">
+						<!-- <img src="../doge.jpeg" fade-person-title="personTwoFadedUp" class="team-member-image color-image"> -->
+					</div>
+					<div fade-person-title="personTwoFadedUp" class="person-title-block">
+						<h3 class="team-title">Hans He</h3>
+						<h4 class="team-subtitle">bruh</h4>
+					</div>
+				</div>
+				<div class="team-member-container" ng-mouseenter="changePeopleTitle(3)" ng-mouseleave="changePeopleTitle(3)" ng-click="open(3)">
+					<div class="person-image-div">
+						<img src="../doge3.jpg" class="team-member-image">
+						<!-- <img src="../doge3.jpg" fade-person-title="personThreeFadedUp" class="team-member-image color-image"> -->
+					</div>
+					<div fade-person-title="personThreeFadedUp" class="person-title-block">
+						<h3 class="team-title">Diana Chang</h3>
+						<h4 class="team-subtitle">breh</h4>
+					</div>
+				</div>
+				<div class="team-member-container" ng-mouseenter="changePeopleTitle(4)" ng-mouseleave="changePeopleTitle(4)" ng-click="open(4)">
+					<div class="person-image-div">
+						<img src="../ed.png" class="team-member-image">
+						<!-- <img src="../ed.png" fade-person-title="personFourFadedUp" class="team-member-image color-image"> -->
+					</div>
+					<div fade-person-title="personFourFadedUp" class="person-title-block">
+						<h3 class="team-title">Michael Chen</h3>
+						<h4 class="team-subtitle">arf</h4>
+					</div>
+				</div>
+				<div class="team-member-container" ng-mouseenter="changePeopleTitle(5)" ng-mouseleave="changePeopleTitle(5)" ng-click="open(5)">
+					<div class="person-image-div">
+						<img src="../doge2.jpg" class="team-member-image">
+						<!-- <img src="../doge2.jpg" fade-person-title="personFiveFadedUp" class="team-member-image color-image"> -->
+					</div>
+					<div fade-person-title="personFiveFadedUp" class="person-title-block">
+						<h3 class="team-title">Karen Qian</h3>
+						<h4 class="team-subtitle">brahh</h4>
+					</div>
+				</div>
+			</div>
+
+        </div>
+
+        <!-- Supervisors Page -->
+        <div ng-if="tab===4" class="page-container">
+            
+			<div class="people-section-text">
+				<p class="preamble first"> I would be lost without you guys. </p>
+			</div>
+			<div ng-click="open()">Alex Martineau</div>
+			<div ng-click="open()">Will Brother</div>
+			<div ng-click="open()">Henry Wagner</div>
+			<div ng-click="open()">Andrew Hartford</div>
+			<div ng-click="open()">Ian Davey</div>
+			<div ng-click="open()">Matt Noe</div>
+			<div ng-click="open()">Brian Foote</div>
+			<div ng-click="open()">Mark Sherriff</div>
+			<div ng-click="open()">Luther Tychonievich</div>
+
+            
+        </div>
+
+        <!-- Professors Page -->
+        <div ng-if="tab===5" class="page-container">
+
+			<div class="people-section-text">
+				<p class="preamble first"> Thank you, for teaching, for supporting, for motivating students to learn. </p>
+			</div>
+			<div ng-click="open()">Marty Humphreys</div>
+			<div ng-click="open()">Wes Weimer</div>
+			<div ng-click="open()">Gabe Robins</div>
+			<div ng-click="open()">Luther Tychonievich</div>
+			<div ng-click="open()">Aaron Bloomfield</div>
+			<div ng-click="open()">Mark Floryan</div>
+
+        </div>
+		
+        <!-- Inspiration Page -->
+        <div ng-if="tab===6" class="page-container">
+			<div class="people-section-text">
+				<p class="preamble first"> Role models and inspirations. Thank you for igniting my inner fire. </p>
+			</div>
+			<div ng-click="open()">Dave Singh</div>
+			<div ng-click="open()">Michael Recachinas</div>
+			<div ng-click="open()">Erin Boehmer</div>
+			<div ng-click="open()">Jess Lee</div>
+			<div ng-click="open()">Kristina Hu</div>
+			<div ng-click="open()">Glenna Yu</div>
+			<div ng-click="open()"></div>
+			<div ng-click="open()"></div>
+
+        </div>
+		
+        <!-- Companies Page -->
+        <div ng-if="tab===7" class="page-container">
+			<div class="people-section-text">
+				<p class="preamble first"> These companies have taught me so many lessons, in software development and in personal development. </p>
+			</div>
+			<div ng-click="open()">Alkemy</div>
+			<div ng-click="open()">Akamai Technologies</div>
+			<div ng-click="open()">JP Morgan & Code For Good Hackathon</div>
+			<div ng-click="open()">iD Tech</div>
+
+        </div>
+		
+        <!-- Universities Page -->
+        <div ng-if="tab===8" class="page-container">
+			<div class="people-section-text">
+				<p class="preamble first"> A big thank you to both my alma mater and various other schools for hosting amazing hackathons for my friends and I to attend. </p>
+			</div>
+			<div ng-click="open()">Wahoowa!</div>
+			<div ng-click="open()">HackPrinceton</div>
+			<div ng-click="open()">HackDuke</div>
+			<div ng-click="open()">HackMIT</div>
+			<div ng-click="open()">PennApps</div>
+
+        </div>
+
+        <div id="main-footer-overall">
+            <div class="footer-multiline">
+                <p>© michael chen, 2015<br/>Happy Thanksgiving!</p>
+            </div>
+            <div class="social-icons-outer-container">
+                <div class="social-icon-circle">
+                    <a class="social-icon" href="mailto:michael.was.here@gmail.com">
+                        <div class="social-icon-inner-container">
+                            <i class="fa fa-envelope link-icon email"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="social-icon-circle">
+                    <a class="social-icon" href="http://www.twitter.com/" target="blank">
+                        <div class="social-icon-inner-container">
+                            <i class="fa fa-twitter link-icon twitter" style="margin-left: 1px;"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-multiline">
+                <p><a href="#">Special Thanks to Brian Foote<br/>For his thorough explanation of front-end technologies</a></p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="../js/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
+<script src="../js/ui-bootstrap-tpls.js"></script>
+<script src="../js/app.js"></script>
+
+</body>
+</html>
